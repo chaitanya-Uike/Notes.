@@ -96,7 +96,7 @@ main h2{
 #notes-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(12rem, calc(200px + 1rem)));
-    grid-gap:1rem;
+    grid-gap:15px;
     align-items: start;
 }
 
