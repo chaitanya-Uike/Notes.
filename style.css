@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family: 'DM Mono', monospace;
+    color: #EDEDED;
+}
+
+body{
+    background-color: #171717;
+}
+
+nav{
+    background-color: #EDEDED;
+    color: #171717;
+    padding: 1rem;
+}
+
+main{
+    width: 60%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+main h2{
+    margin-bottom: 10px;
+}
+
+#addNotes-section{
+    border: 1px solid #444444;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+#text-area{
+    background-color: #444444;
+    border: none;
+    color: #EDEDED;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 70px;
+    max-width: calc(100% - 10px);
+    padding: 5px;
+    resize: vertical;
+    margin-top: 10px;
+}
+
+#heading-text-area{
+    background-color: #444444;
+    border: none;
+    color: #EDEDED;
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+    height: 3ch;
+    max-width: calc(100% - 10px);
+    padding: 5px;
+    resize: vertical;
+}
+
+::placeholder {
+    color: #c7c7c7;
+}
+
+#addNotes-section p{
+    margin-bottom: 5px;
+}
+
+#addNote-btn{
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #DA0037;
+    border: none;
+    border-radius: 5px;
+    color: #EDEDED;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#notes-area{
+    width: 60%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+#notes-area h1{
+    margin-bottom: 10px;
+}
+
+#notes-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, calc(200px + 1rem)));
+    grid-gap:1rem;
+    align-items: start;
+}
+
+.cards{
+    background-color: #DA0037;
+    padding: 1rem;
+    max-width: 200px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-gap:1rem;
+    border-radius: 5px;
+}
+
+.delete-btn
+{
+    background-color: #EDEDED;
+    width: 4rem;
+    font-weight: 600;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
