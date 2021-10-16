@@ -1,11 +1,23 @@
+class Note {
+    constructor(title, text) {
+        this.ID = String(Date.now() + Math.random()) % 17;
+        this.title = title;
+        this.text = text;
+        this.time = new Date().toLocaleString();
+    }
+}
+
+
+
 function createCard(note) {
     let card = document.createElement("div");
     card.className = "cards";
-    card.id = note.cardId;
+    card.id = note.ID;
     card.innerHTML = `
     <h3>${note.title}</h3>
-    <p>${note.text}</p>
-    <button id = "delete-${note.cardId}" class="delete-btn">Delete</button>`;
+    <div id="note-text-container">${note.text}</div>
+    <p>${note.time}</p>
+    <button id = "delete-${note.ID}" class="delete-btn">Delete</button>`;
     return card;
 }
 
@@ -71,9 +83,7 @@ document.getElementById("addNote-btn").addEventListener("click", function () {
     let headingArea = document.getElementById("heading-text-area");
     let textArea = document.getElementById("text-area");
 
-    let ID = (Date.now() + Math.random()) % 17;
-
-    let note = { cardId: ID, title: headingArea.value, text: textArea.value };
+    let note = new Note(headingArea.value, textArea.value);
 
     let notesArray = JSON.parse(localStorage.getItem("notes"));
 

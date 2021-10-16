@@ -48,6 +48,7 @@ main h2{
     padding: 5px;
     resize: vertical;
     margin-top: 10px;
+    white-space: pre-wrap;
 }
 
 #heading-text-area{
@@ -95,9 +96,10 @@ main h2{
 
 #notes-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(12rem, calc(200px + 1rem)));
-    grid-gap:14px;
+    grid-template-columns: repeat(auto-fit, calc(200px + 1rem));
+    grid-gap: 15px;
     align-items: start;
+    justify-content: space-around;
 }
 
 .cards{
@@ -108,6 +110,18 @@ main h2{
     grid-template-rows: auto 1fr auto;
     grid-gap:1rem;
     border-radius: 5px;
+}
+
+.cards p{
+    margin-top: 10px;
+    font-size: 0.7rem;
+}
+
+#note-text-container{
+    display: inline-block;
+    word-break: break-word;
+    white-space: pre-wrap;
+
 }
 
 .delete-btn
